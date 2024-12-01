@@ -1,9 +1,9 @@
-FROM quay.io/toolbx/ubuntu-toolbox:22.04 as obs-studio-portable
+FROM quay.io/toolbx/ubuntu-toolbox:24.04 as obs-studio-portable
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
       summary="OBS Studio Portable" \
-      maintainer="jorge.castro@gmail.com"
+      maintainer="laaaain@0x00.network"
 
 COPY ./extra-packages /extra-packages
 
@@ -18,7 +18,7 @@ RUN wget https://github.com/jqlang/jq/releases/download/jq-1.6/jq-linux64 -O /us
     chmod +x /usr/bin/jq && \
     mkdir -p /tmp/obs-portable && \
     wget \
-        $(curl -s https://api.github.com/repos/wimpysworld/obs-studio-portable/releases/latest | \
+        $(curl -s https://api.github.com/repos/xlaaaain/obs-studio-portable-build/releases/latest | \
         jq -r ".assets[] | select(.name | test(\"ubuntu-$(lsb_release -rs).tar.bz2\$\")) | .browser_download_url") \
         -O /tmp/obs-portable/latest.tar.bz2 && \
     tar xvf /tmp/obs-portable/latest.tar.bz2 -C /tmp/obs-portable --strip-components=1 && \
