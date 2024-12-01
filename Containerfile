@@ -7,7 +7,7 @@ LABEL com.github.containers.toolbox="true" \
 
 COPY ./extra-packages /extra-packages
 
-ARG DEBIAN_FRONTEND=nointeractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \ 
     apt-get upgrade -y && \
