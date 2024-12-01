@@ -1,6 +1,3 @@
-# NOTE: THIS IMAGE IS DEPRECATED
-If you want to take over maintenance of this repository please file an issue and the team will transfer ownership to you 
-
 <h1 align="center">
   <img src="https://avatars1.githubusercontent.com/u/7725691?v=3&s=256" alt="OBS Studio">
   <br />
