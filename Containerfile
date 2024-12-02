@@ -18,15 +18,15 @@ RUN apt-get update && \
 # Install OBS Studio Portable
 RUN wget https://github.com/jqlang/jq/releases/download/jq-1.6/jq-linux64 -O /usr/bin/jq && \
     chmod +x /usr/bin/jq && \
-    mkdir -p /tmp/obs-portable && \
+    mkdir -p ~/obs-portable && \
     wget \
         $(curl -s https://api.github.com/repos/xlaaaain/obs-studio-portable-build/releases/latest | \
         jq -r ".assets[] | select(.name | test(\"ubuntu-$(lsb_release -rs).tar.bz2\$\")) | .browser_download_url") \
-        -O /tmp/obs-portable/latest.tar.bz2 && \
-    tar xvf /tmp/obs-portable/latest.tar.bz2 -C /tmp/obs-portable --no-same-owner --strip-components=1 && \
-    rm /tmp/obs-portable/latest.tar.bz2 && \
-    /tmp/obs-portable/obs-container-dependencies && \
-    mv /tmp/obs-portable /opt/obs-portable && \
+        -O ~/obs-portable/latest.tar.bz2 && \
+    tar xvf ~/obs-portable/latest.tar.bz2 -C ~/obs-portable --strip-components=1 && \
+    rm ~/obs-portable/latest.tar.bz2 && \
+    ~/obs-portable/obs-container-dependencies && \
+    mv ~/obs-portable /opt/obs-portable && \
     rm /usr/bin/jq
 
 # Create desktop file from upstream
