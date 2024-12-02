@@ -1,4 +1,5 @@
 # THIS VERSION IS NOT TESTED AND OBS IS NOT UP TO DATE WITH THE LATEST VERSION (latest 30.2.3, this image 30.0.2) USE AT YOUR OWN RISK
+## This container image will not be maintained regularly due to my schedule. If you find any issues please submit a report [here](https://github.com/xlaaaain/obs-studio-portable/issues) or submit a pull request if you'd like to contribute. I will do my best to look after any submitted issues and PRs but I cannot guarantee that I'll be able to respond in a timely manner. All credit for this container goes to the team at Universal Blue for originally creating the container.
 
 <h1 align="center">
   <img src="https://avatars1.githubusercontent.com/u/7725691?v=3&s=256" alt="OBS Studio">
@@ -49,7 +50,7 @@ Use [Distrobox](https://distrobox.it/) to run [OBS Studio Portable](https://gith
 2. Create a Distrobox container for OBS Studio Portable.
 
 ```bash
-distrobox create --image ghcr.io/ublue-os/obs-studio-portable:latest --name obs --pull
+distrobox create --image ghcr.io/xlaaaain/obs-studio-portable:latest --name obs --pull
 ```
 
 ## NVIDIA support
@@ -65,7 +66,7 @@ Therefore, if your are running an older version of Distrobox or the NVIDIA drive
 Required if the display is rendered by an NVIDIA GPU.
 
 ```bash
-distrobox create --image ghcr.io/ublue-os/obs-studio-portable:latest --name obs --pull --additional-packages nvidia-driver-535
+distrobox create --image ghcr.io/xlaaaain/obs-studio-portable:latest --name obs --pull --additional-packages nvidia-driver-535
 ```
 
 ### NVIDIA compute only
@@ -73,7 +74,7 @@ distrobox create --image ghcr.io/ublue-os/obs-studio-portable:latest --name obs 
 Suitable for multi-GPU systems where the NVIDIA GPU is not rendering the display and only being used for compute.
 
 ```bash
-distrobox create --image ghcr.io/ublue-os/obs-studio-portable:latest --name obs --pull --additional-packages libnvidia-encode-535 nvidia-headless-no-dkms-535
+distrobox create --image ghcr.io/xlaaaain/obs-studio-portable:latest --name obs --pull --additional-packages libnvidia-encode-535 nvidia-headless-no-dkms-535
 
 3. Run the initial setup.
 
@@ -91,7 +92,7 @@ If the OBS Studio Portable container cannot connect to the host X11 server, add 
 
 # More information
 
-This container image of OBS Studio Portable is maintained as a collaborative effort between [Universal Blue](https://github.com/ublue-os) and [Martin Wimpress](https://github.com/flexiondotorg), the maintainer of [OBS Studio Portable for Ubuntu](https://github.com/wimpysworld/obs-studio-portable).
+This fork is a container image of OBS Studio Portable that was maintained as a collaborative effort between [Universal Blue](https://github.com/ublue-os) and [Martin Wimpress](https://github.com/flexiondotorg), the maintainer of [OBS Studio Portable for Ubuntu](https://github.com/wimpysworld/obs-studio-portable). I have forked both in order to attempt to update both OBS and the container image, and as a way for me to learn more about git and github. (I am very new to this so please have some patience with me)
 
 ## OBS Studio Portable Plugins
 
@@ -99,7 +100,7 @@ Thanks to the OBS Studio developers and developers of the growing list of excell
 OBS Studio Portable for Linux celebrates the best of what's available. Thank you! 🙇
 
 Here are the 3rd party plugins that come bundled with OBS Studio Portable for Linux:
-
+Plugins will be removed/added/replaced as needed subject to OBS updates
 ### Audio 🔉
 
 - **[Audio Pan](https://github.com/norihiro/obs-audio-pan-filter)** plugin; control stereo pan of audio sources.
