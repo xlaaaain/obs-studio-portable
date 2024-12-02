@@ -1,3 +1,5 @@
+# THIS VERSION IS NOT TESTED AND OBS IS NOT UP TO DATE WITH THE LATEST VERSION (latest 30.2.3, this image 30.0.2) USE AT YOUR OWN RISK
+
 <h1 align="center">
   <img src="https://avatars1.githubusercontent.com/u/7725691?v=3&s=256" alt="OBS Studio">
   <br />
@@ -8,7 +10,7 @@
 <br />
 Made with 💝 for 🐧</p>
 
-[![build-obs-studio-portable](https://github.com/ublue-os/obs-studio-portable/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/obs-studio-portable/actions/workflows/build.yml)
+[![build-obs-studio-portable](https://github.com/xlaaaain/obs-studio-portable/actions/workflows/build.yml/badge.svg)](https://github.com/xlaaaain/obs-studio-portable/actions/workflows/build.yml)
 
 # OBS Studio Portable for Linux
 
