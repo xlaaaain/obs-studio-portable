@@ -17,3 +17,11 @@ if ! findmnt "${OBS_CONFIG_DIR}"; then
         "${OBS_USER_CONFIG_DIR}" \
         "${OBS_CONFIG_DIR}"
 fi
+
+# Adding permissions fix to run as rootless
+# Get the UID and GID of the current user
+USER_UID=$(id -u)
+USER_GID=$(id -g)
+
+# Change ownership of the /opt/obs-portable directory to the current user
+sudo chown -R ${USER_UID}:${USER_GID} /opt/obs-portable
