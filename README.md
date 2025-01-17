@@ -1,3 +1,5 @@
+# UPDATE 2025-01-17 I'm archiving this repo as I no longer need to use this container, I've switched to the OBS flatpak and I recommend you do as well.
+
 # THIS VERSION IS NOT TESTED AND OBS IS NOT UP TO DATE WITH THE LATEST VERSION (latest 30.2.3, this image 30.0.2) USE AT YOUR OWN RISK
 ## This container image will not be maintained regularly due to my schedule. If you find any issues please submit a report [here](https://github.com/xlaaaain/obs-studio-portable/issues) or submit a pull request if you'd like to contribute. I will do my best to look after any submitted issues and PRs but I cannot guarantee that I'll be able to respond in a timely manner. All credit for this container goes to the team at Universal Blue for originally creating the container.
 
